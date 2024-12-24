@@ -64,13 +64,17 @@ The request body should be a JSON object containing the following fields:
 }
 ```
 
-## `/users/login` Endpoints
+## `/users/profile` Endpoints
 
 #### Description
-This endpoint is used to log in an existing user.
+This endpoint is used to get the profile of the authenticated user.
 
 #### HTTP Method
-POST
+GET
+
+#### Authorization
+Requires a valid JWT token in the authorization header:
+`Authorization: Bearer<token>`
 
 #### Request Body
 The request body should be a JSON object containing the following fields:
@@ -92,3 +96,14 @@ The request body should be a JSON object containing the following fields:
   }
 }
 ```
+
+## `/users/logout` Endpoints
+
+#### Description
+This endpoint is used to log out the authenticated user.
+
+#### HTTP Method
+GET
+
+#### Authorization
+Requires a valid JWT token in the authorization header or cookie.
