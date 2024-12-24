@@ -1,11 +1,12 @@
 # Backend API Documentation
 
-## Endpoints
-
-### POST /users/register
+## /users/register Endpoints
 
 #### Description
 This endpoint is used to register a new user.
+
+#### HTTP Method
+POST
 
 #### Request Body
 The request body should be a JSON object containing the following fields:
