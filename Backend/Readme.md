@@ -157,3 +157,44 @@ GET
 
 #### Authorization
 Requires a valid JWT token in the authorization header or cookie.
+
+## `/captain/register` Endpoints
+
+#### Description
+This endpoint is used to register a new captain.
+
+#### HTTP Method
+POST
+
+#### Request Body
+The request body should be a JSON object containing the following fields:
+
+- `fullname`(object):
+  - `firstname` (string, required): The first name of the captain. Must be at least 3 characters long.
+  - `lastname` (string, optional): The last name of the captain. Must be at least 3 characters long.
+- `email` (string, required): The email address of the captain. Must be a valid email format.
+- `password` (string, required): The password for the captain. Must be at least 6 characters long.
+- `vehicle `(object):
+  - `colour` (string, required): The colour of the vehicle. Must be at least 3 characters long.
+  - `plateNumber` (string, required): The plate number of the vehicle. Must be at least 3 characters long.
+  - `capacity` (string, required): The capacity of the vehicle. Must be at least 1.
+  - `vehicleType` (string, required): The type of the vehicle. Must be one of "car", "motorcycle", or "auto".
+
+#### Example Response
+```json
+{
+  "_id": "60d0fe4f5311236168a109cb",
+  "fullname": {
+    "firstname": "Jane",
+    "lastname": "Doe"
+  },
+  "email": "jane.doe@example.com",
+  "vehicle": {
+    "colour": "Red",
+    "plateNumber": "XYZ123",
+    "capacity": 4,
+    "vehicleType": "car"
+  }
+}
+```
+
